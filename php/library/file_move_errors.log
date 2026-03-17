@@ -1,0 +1,19 @@
+[08-Mar-2025 11:57:31 Europe/Berlin] Move file script started
+[08-Mar-2025 11:57:35 Europe/Berlin] Move file script started
+[08-Mar-2025 11:57:38 Europe/Berlin] Move file script started
+[08-Mar-2025 11:58:36 Europe/Berlin] Database connection successful
+[08-Mar-2025 11:59:03 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 34
+[08-Mar-2025 11:59:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on null in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 34
+[08-Mar-2025 12:02:27 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 32
+[08-Mar-2025 12:02:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on null in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php:32
+Stack trace:
+#0 {main}
+  thrown in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 32
+[08-Mar-2025 12:02:31 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 32
+[08-Mar-2025 12:02:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on null in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php:32
+Stack trace:
+#0 {main}
+  thrown in C:\XAMPP\htdocs\WebDevProject_WIP\php\library\move-file.php on line 32

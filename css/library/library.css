@@ -1,0 +1,635 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: #46609a;
+    --secondary-color: #2f4786;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --white: #ffffff;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --edit-color: #3498db;
+    --open-color: #9b59b6;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Library Container */
+.library-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.user-welcome {
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--white);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 60px;
+    text-align: center;
+}
+
+.small-btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    margin-left: 3px;
+    min-width: 40px;
+}
+
+.btn:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 80%, white);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn.delete-btn {
+    background-color: var(--danger-color);
+}
+
+.btn.delete-btn:hover {
+    background-color: color-mix(in srgb, var(--danger-color) 80%, white);
+}
+
+.btn.add-file-btn {
+    background-color: var(--success-color);
+}
+
+.btn.add-file-btn:hover {
+    background-color: color-mix(in srgb, var(--success-color) 80%, white);
+}
+
+.btn.edit-btn {
+    background-color: var(--edit-color);
+}
+
+.btn.edit-btn:hover {
+    background-color: color-mix(in srgb, var(--edit-color) 80%, white);
+}
+
+.btn.open-btn {
+    background-color: var(--open-color);
+}
+
+.btn.open-btn:hover {
+    background-color: color-mix(in srgb, var(--open-color) 80%, white);
+}
+
+#home-btn {
+    background-color: var(--success-color);
+}
+
+#home-btn:hover {
+    background-color: color-mix(in srgb, var(--success-color) 80%, white);
+}
+
+/* Improved Logout Button Styling */
+#logout-btn a {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+#logout-btn:hover a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animation for logout button */
+#logout-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+#logout-btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#logout-btn:hover:after {
+    transform: translateX(100%);
+}
+
+/* Button Links Styling */
+.btn a {
+    text-decoration: none;
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Login Required Message */
+.login-required-message {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* login link styling */
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.login-required-message p a {
+    color: var(--edit-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.login-required-message p a:hover {
+    color: var(--white);
+    background-color: var(--edit-color);
+    text-decoration: none;
+}
+
+/* File Explorer */
+.file-explorer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Folder Styles */
+.folder {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: color-mix(in srgb, var(--background-color) 90%, black);
+}
+
+.folder-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.folder-info:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.folder-toggle {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.folder-info:hover .folder-toggle {
+    transform: translateX(2px);
+}
+
+.folder-toggle span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.folder-name {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.folder-controls, .file-controls {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+/* File List - Normal State */
+.file-list {
+    padding: 10px 15px;
+    max-height: 500px; 
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform-origin: top;
+    transform: scaleY(1);
+    border-top: 1px solid color-mix(in srgb, var(--background-color) 90%, black);
+}
+
+/* File List - Collapsed State */
+.file-list.collapsed {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    border-top: none;
+    visibility: hidden; 
+}
+
+/* File Styles */
+.file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid color-mix(in srgb, var(--background-color) 80%, black);
+}
+
+.file:last-child {
+    border-bottom: none;
+}
+
+.file-name {
+    flex-grow: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    padding: 0 5px;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#open-file-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#open-file-content {
+    overflow-y: auto;
+    max-height: 70vh;
+    padding: 15px;
+    background-color: var(--white);
+    border: 1px solid color-mix(in srgb, var(--background-color) 70%, black);
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Scrollbar style for file content to match existing UI */
+#open-file-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#open-file-content::-webkit-scrollbar-track {
+    background: color-mix(in srgb, var(--background-color) 80%, white);
+}
+
+#open-file-content::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--background-color) 50%, black);
+    border-radius: 4px;
+}
+
+/* Add a file name display in the modal */
+#open-file-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid color-mix(in srgb, var(--background-color) 70%, black);
+}
+
+/* Modal body lock class */
+.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid color-mix(in srgb, var(--background-color) 70%, black);
+    border-radius: 5px;
+}
+
+.modal textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--white);
+    z-index: 1100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: var(--danger-color);
+}
+
+.empty-state {
+    text-align: center;
+    color: color-mix(in srgb, var(--text-color) 60%, white);
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+.empty-folder {
+    text-align: center;
+    color: color-mix(in srgb, var(--text-color) 60%, white);
+    padding: 10px;
+    font-style: italic;
+}
+
+/* Unfiled Files Section ("Other Files") */
+.unfiled-files {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Folder-header in unfiled-files tyling */
+.unfiled-files .folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: color-mix(in srgb, var(--background-color) 90%, black);
+}
+
+/* Ensures the folder-info and folder-toggle styles apply to unfiled-files */
+.unfiled-files .folder-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.unfiled-files .folder-toggle {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+/* Styles the files in unfiled-files section */
+.unfiled-files .file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid color-mix(in srgb, var(--background-color) 80%, black);
+}
+
+.unfiled-files .file:last-child {
+    border-bottom: none;
+}
+
+/* Ensures collapse functionality works with unfiled-files */
+.unfiled-files .file-list {
+    padding: 10px 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform-origin: top;
+    transform: scaleY(1);
+    border-top: 1px solid color-mix(in srgb, var(--background-color) 90%, black);
+}
+
+.unfiled-files .file-list.collapsed {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    transform: scaleY(0);
+    overflow: hidden;
+    border-top: none;
+    visibility: hidden;
+}
+
+
+/* Scrollbar */
+.file-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.file-list::-webkit-scrollbar-track {
+    background: color-mix(in srgb, var(--background-color) 80%, white);
+}
+
+.file-list::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--background-color) 50%, black);
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .user-welcome {
+        order: -1;
+        margin: 0 0 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .controls {
+        margin-top: 15px;
+    }
+
+    .folder-header {
+        flex-wrap: wrap;
+    }
+
+    .folder-name {
+        max-width: 150px;
+    }
+
+    .folder-controls, .file-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+
+    .small-btn {
+        margin-top: 3px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 0 10px;
+    }
+
+    .file-name {
+        max-width: 120px;
+    }
+
+    #logout-btn {
+        margin: 5px;
+    }
+
+    .login-required-message a {
+        display: inline-block;
+        margin: 5px 0;
+        padding: 5px 10px;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

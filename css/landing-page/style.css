@@ -1,0 +1,447 @@
+/* General Styles */
+body {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    background-image: url(HomeBackground\ -\ Copy.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Stack Area Layout */
+.stack-area {
+    width: 100vw;
+    height: 300vh;
+    position: relative;
+    background: transparent;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/* Left Section Styling */
+.left {
+    height: 100vh;
+    flex-basis: 50%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.title {
+    width: 420px;
+    font-size: clamp(55px, 6vw, 76px);
+    font-family: poppins;
+    font-weight: 700;
+    line-height: 80px;
+    margin-top: 80px;
+    margin-left: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.5px);
+    border-radius: 20px;
+}
+
+.sub-title {
+    width: 450px;
+    font-family: poppins;
+    font-size: clamp(16px, 2.2vw, 18px);
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0.5px);
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This helps center child elements */
+    overflow-y: auto; /* Add scrolling for very short screens */
+}
+
+.sub-title button {
+    font-family: poppins;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px 30px;
+    color: white;
+    background: black;
+    border-radius: 8mm;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Account Section Styling */
+#accountSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Added for better centering */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center; /* Additional centering support */
+}
+
+/* Makes sure the link containing the button is centered */
+#accountSection #createAccountLink {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Applies proper centering to the button itself */
+#createAccountBtn {
+    font-family: poppins;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px 30px;
+    color: white;
+    background: black;
+    border-radius: 8mm;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px auto; /* Centers the button with auto margins */
+    display: inline-block; /* Changed from block to inline-block */
+}
+
+#welcomeMessage {
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, rgba(77, 92, 255, 0.9), rgba(247, 92, 208, 0.9));
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 10px auto; /* Sets vertical and horizontal margins */
+    text-align: center;
+    width: fit-content;
+    max-width: 80%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: welcomeFadeIn 0.5s ease-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    /* Force centering */
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+#welcomeMessage::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+#welcomeMessage:hover {
+    transform: translateY(-10px) translateX(-50%);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes welcomeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+/* Right Section Styling */
+.right {
+    height: 100vh;
+    flex-basis: 50%;
+    position: sticky;
+    top: 0;
+}
+
+/* Card Layout */
+.card {
+    width: 350px;
+    height: 350px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: calc(50% - 175px);
+    left: calc(50% - 175px);
+    transition: 0.5s ease-in-out;
+    box-sizing: border-box;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card:nth-child(1) {
+    background: rgb(64, 122, 255);
+}
+
+.card:nth-child(2) {
+    background: rgb(221, 62, 88);
+}
+
+.card:nth-child(3) {
+    background: rgb(186, 113, 245);
+}
+
+.card:nth-child(4) {
+    background: rgb(247, 92, 208);
+}
+
+/* Card Content */
+.sub {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content {
+    font-family: poppins;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.prompt {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #4d5cff, #fb4040, #ff3fb2, #8f68ff, #ff3fb2, #fb4040, #4d5cff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 4s linear infinite;
+    text-align: center;
+    color: white;
+    font-family: poppins;
+    font-size: 2.3em;
+    text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.3);
+    text-shadow: -2px -2px 6px rgba(0, 85, 255, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(34, 37, 49, 0.842);
+    backdrop-filter: blur(10px);
+    border-radius: 7.5px;
+    z-index: 1000;
+}
+
+.hamMenu {
+    height: 70px;
+    width: 80px;
+    margin-left: auto;
+    z-index: 9999;
+    position: relative;
+}
+
+.hamMenu:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hamMenu span:nth-child(1) {
+    top: 25%;
+}
+
+.hamMenu span:nth-child(3) {
+    top: 75%;
+}
+
+/* Off-Screen Menu Styling */
+.offScreenMenu {
+    background-color: rgba(34, 37, 49, 0.7);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .5s ease;
+    z-index: 9999;
+}
+
+.offScreenMenu.active {
+    right: 0;
+}
+
+.closeMenu {
+    opacity: 0;
+}
+
+/* Hamburger Menu Active State */
+.hamMenu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.2s;
+}
+
+.hamMenu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamMenu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.2s;
+}
+
+/* List Styles */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: white;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+span {
+    height: 5px;
+    width: 100%;
+    background-color: #6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1000px) and (max-height: 700px) {
+    body {
+        overflow-y: auto !important; /* Force scrolling to be available */
+    }
+    
+    .stack-area {
+        height: auto;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .left, .right {
+        position: relative;
+        height: auto;
+        min-height: 100vh; /* Set minimum height for content */
+    }
+    
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px; /* Space from top */
+    }
+    
+    /* Stack cards vertically */
+    .card {
+        position: relative;
+        margin: 15px auto;
+        height: 250px; /* Fixed height for cards */
+        width: 80%;
+        max-width: 350px;
+    }
+    
+    /* Fix for nav to stay on top */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+    }
+}
+
+/* Adjust scrolling behavior for all screen sizes */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    height: auto;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+        .card {
+            opacity: 0;
+            transition: 2s;
+        }
+}
+
+@media only screen and (max-width: 700px) {
+    .left, .right {
+        position: relative;
+        height: auto;
+    }
+
+    .closeMenu {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 10001;
+        opacity: 0.7;
+    }
+    
+    .closeMenu:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
