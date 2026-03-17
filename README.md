@@ -47,22 +47,6 @@ Responsive interface
 
 ---
 
-# Screenshots
-
-### Landing Page
-
-![Landing Page](screenshots/landing-page.png)
-
-### Code Library
-
-![Library Interface](screenshots/library-view.png)
-
-### Creating Code Snippets
-
-![Create Snippet](screenshots/create-snippet.png)
-
----
-
 # Project Architecture
 
 The application follows a simple **client-server architecture**.
@@ -116,6 +100,42 @@ Then open your browser and go to
 http://localhost
 
 ---
+
+# Application Walkthrough
+
+## Login Page
+![Login Page](Screenshots/01.%20Login.png)
+
+## Registration Page
+![Register Page](Screenshots/02.%20Register.png)
+
+## Landing Page
+![Home Page](Screenshots/03.%20Home.png)
+
+## Mobile Navigation Menu
+![Home Burger Menu](Screenshots/04.%20HomeBurger.png)
+
+## Code Library
+![Library Page](Screenshots/05.%20Library.png)
+
+## Opening a Code Snippet
+![Open File](Screenshots/06.%20OpenFile.png)
+
+## Editing a Code Snippet
+![Edit File](Screenshots/07.%20EditFile.png)
+
+## About Page
+![About Section](Screenshots/08.%20About1.png)
+
+![About Section](Screenshots/09.%20About2.png)
+
+![About Section](Screenshots/10.%20About3.png)
+
+![About Section](Screenshots/11.%20About4.png)
+
+![About Section](Screenshots/12.%20About5.png)
+
+![About Section](Screenshots/13.%20About6.png)
 
 # Future Improvements
 
