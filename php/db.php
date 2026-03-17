@@ -8,7 +8,7 @@ $port = getenv("DB_PORT");
 
 try {
     $pdo = new PDO(
-        "pgsql:host=$host;port=$port;dbname=$dbname",
+        "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require",
         $user,
         $password
     );
@@ -16,11 +16,9 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
-
-    header('Content-Type: application/json');
     echo json_encode([
         "success" => false,
-        "message" => "Database connection failed"
+        "message" => $e->getMessage()
     ]);
     exit;
 }

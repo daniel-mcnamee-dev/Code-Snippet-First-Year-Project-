@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 // Start the session at the very top of your file
 session_start();
@@ -7,6 +6,7 @@ session_start();
 $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
 $user_name = $_SESSION['user_name'] ?? null;
 ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
