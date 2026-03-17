@@ -137,18 +137,3 @@ http://localhost
 
 ![About Section](Screenshots/13.%20About6.png)
 
-# Future Improvements
-
-Syntax highlighting for code snippets
-Snippet tagging system
-Search functionality
-Sharing snippets between users
-Improved UI/UX
-Export snippets as files
-
----
-
-# License
-
-This project is licensed under the MIT License.
-
