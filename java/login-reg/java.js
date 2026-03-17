@@ -117,7 +117,7 @@ loginForm.addEventListener('submit', function(e) {
     const formData = new FormData(loginForm);
     
     // Submit form using fetch API with absolute path
-    fetch(`$/php/login-reg/log.php`, {
+    fetch(`/php/login-reg/log.php`, {
         method: 'POST',
         body: formData,
         credentials: 'include' // Important for handling cookies/sessions
@@ -196,7 +196,7 @@ registerForm.addEventListener('submit', function(e) {
     const formData = new FormData(registerForm);
     
     // Submit form using fetch API with absolute path
-    fetch(`$/php/login-reg/reg.php`, {
+    fetch(`/php/login-reg/reg.php`, {
         method: 'POST',
         body: formData,
         credentials: 'include' // Important for handling cookies/sessions
@@ -294,7 +294,7 @@ document.getElementById('verifyEmailBtn').addEventListener('click', function() {
     formData.append('action', 'verifyEmail');
     
     // Fetch security question for the email
-    fetch(`$/php/login-reg/forgot_password.php`, {
+    fetch(`/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
@@ -338,7 +338,7 @@ document.getElementById('verifyAnswerBtn').addEventListener('click', function() 
     formData.append('action', 'verifyAnswer');
     
     // Verify security answer
-    fetch(`$/php/login-reg/forgot_password.php`, {
+    fetch(`/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
@@ -375,7 +375,7 @@ document.getElementById('resetPasswordBtn').addEventListener('click', function()
     formData.append('action', 'resetPassword');
     
     // Reset password
-    fetch(`$/php/login-reg/forgot_password.php`, {
+    fetch(`/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
