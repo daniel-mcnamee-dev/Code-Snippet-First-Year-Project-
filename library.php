@@ -1,3 +1,14 @@
+<?php
+    // Start session if not already started
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    // Check if user is logged in
+    $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+    $user_id = $logged_in ? $_SESSION['user_id'] : null;
+    $user_name = $logged_in ? $_SESSION['user_name'] : null;
+?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -16,18 +27,6 @@
 </head>
 
 <body>
-    <?php
-    // Start session if not already started
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
-    
-    // Check if user is logged in
-    $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
-    $user_id = $logged_in ? $_SESSION['user_id'] : null;
-    $user_name = $logged_in ? $_SESSION['user_name'] : null;
-    ?>
-
     <div class="library-container">
         <div class="navigation-buttons">
             <button class="btn" id="home-btn"><a href="index.php">Home</a></button>
