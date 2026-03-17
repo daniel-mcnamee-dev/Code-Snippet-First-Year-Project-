@@ -30,7 +30,7 @@ You can explore the application by creating an account or using the demo credent
 **Demo account**
 
 Email: [guest@example.ie](mailto:guest@example.ie)
-Password: Dev123
+Password: Guest123
 
 ---
 
