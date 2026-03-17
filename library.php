@@ -23,7 +23,7 @@
 
     <!-- External Style Sheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../WebDevProject_WIP/css/library/library.css">
+    <link rel="stylesheet" href="/css/library/library.css">
 </head>
 
 <body>
