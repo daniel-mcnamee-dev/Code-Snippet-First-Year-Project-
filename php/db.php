@@ -4,7 +4,7 @@ try {
     $host = "aws-1-eu-west-1.pooler.supabase.com";
     $dbname = "postgres";
     $username = "postgres.pvrqdmjbezsbjvkxluie";
-    $password = "YOUR_PASSWORD";
+    $password = "QGLBcGMBqhr3xoEh";
     $port = "5432";
 
     $pdo = new PDO(
