@@ -1,9 +1,9 @@
 <?php
 try {
-    $host = 'localhost';
-    $dbname = 'webdevproj';
-    $username = 'root';
-    $password = '';
+    $host = getenv("DB_HOST");
+    $dbname = getenv("DB_NAME");
+    $username = getenv("DB_USER");
+    $password = getenv("DB_PASS");
 
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
