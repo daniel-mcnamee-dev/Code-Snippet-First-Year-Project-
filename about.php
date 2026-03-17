@@ -40,7 +40,7 @@ $user_name = $_SESSION['user_name'] ?? null;
                     <li><a href="library.php">Library</a></li>
                     <li><a href="about.php">About</a></li>
                     <?php if ($logged_in): ?>
-                        <li><a href="..WebDevProject_WIP/php/landing-page/logout.php" id="logoutLink">Logout (<?php echo htmlspecialchars($user_name); ?>)</a></li>
+                        <li><a href="/php/landing-page/logout.php" id="logoutLink">Logout (<?php echo htmlspecialchars($user_name); ?>)</a></li>
                     <?php else: ?>
                         <li><a href="login-reg.php" id="loginLink">Login</a></li>
                     <?php endif; ?>
@@ -394,7 +394,7 @@ $user_name = $_SESSION['user_name'] ?? null;
                             <li><a href="library.php">Library</a></li>
                             <li><a href="about.php">About</a></li>
                             <?php if ($logged_in): ?>
-                                <li><a href="..WebDevProject_WIP/php/landing-page/logout.php" id="logoutLink">Logout (<?php echo htmlspecialchars($user_name); ?>)</a></li>
+                                <li><a href="/php/landing-page/logout.php" id="logoutLink">Logout (<?php echo htmlspecialchars($user_name); ?>)</a></li>
                             <?php else: ?>
                                 <li><a href="login-reg.php" id="loginLink">Login</a></li>
                             <?php endif; ?>
@@ -420,7 +420,7 @@ $user_name = $_SESSION['user_name'] ?? null;
     </footer>
 
     <!-- Script for lightbox -->
-    <script src="../WebDevProject_WIP/java/about/java.js"></script>
+    <script src="/java/about/java.js"></script>
 
     <!-- Script for session check -->
     <script>
@@ -437,7 +437,7 @@ $user_name = $_SESSION['user_name'] ?? null;
 
                 if (data.logged_in) {
                     // User is logged in, show logout link
-                    loginItem.innerHTML = `<a href="WebDevProject_WIP/php/landing-page/logout.php" id="logoutLink">Logout (${data.user_name})</a>`;
+                    loginItem.innerHTML = `<a href="/php/landing-page/logout.php" id="logoutLink">Logout (${data.user_name})</a>`;
                 } else {
                     // User is not logged in, show login link
                     loginItem.innerHTML = '<a href="login-reg.php" id="loginLink">Login</a>';

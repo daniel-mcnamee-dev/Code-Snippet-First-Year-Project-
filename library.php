@@ -12,7 +12,7 @@
 
     <!-- External Style Sheets -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../WebDevProject_WIP/css/library/library.css">
+    <link rel="stylesheet" href="/css/library/library.css">
 </head>
 
 <body>
@@ -108,7 +108,7 @@
         };
     </script>
 
-    <script src="../WebDevProject_WIP/java/library/java.js"></script>
+    <script src="/java/library/java.js"></script>
 
     <!-- Debug scripts  -->
     <script>
@@ -174,7 +174,7 @@
             console.log("Debugging Other Files section:");
             
             // Check if there are any unfiled files in the data
-            fetch("/WebDevProject_WIP/php/library/fetch-files.php" + (userAuth.loggedIn ? "?user_id=" + userAuth.userId : ""))
+            fetch("/php/library/fetch-files.php" + (userAuth.loggedIn ? "?user_id=" + userAuth.userId : ""))
                 .then(response => response.json())
                 .then(fileData => {
                     const files = fileData.files || [];

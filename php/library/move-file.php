@@ -35,7 +35,7 @@ try {
     }
     
     // Connect to the database with the correct path
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/WebDevProject_WIP/php/db.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/php/db.php';
 
     // Begin transaction to ensure data integrity
     $pdo->beginTransaction();

@@ -109,7 +109,7 @@ function createFileFromModal() {
         data.id = fileId;
     }
 
-    fetch('/WebDevProject_WIP/php/library/save-file.php', {
+    fetch('/php/library/save-file.php', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -149,7 +149,7 @@ function editFile(id) {
         return;
     }
 
-    fetch(`/WebDevProject_WIP/php/library/fetch-file.php?id=${id}&userId=${userAuth.userId}`)
+    fetch(`/php/library/fetch-file.php?id=${id}&userId=${userAuth.userId}`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
@@ -205,7 +205,7 @@ function createNewFolder() {
         data.append('id', folderId);
     }
 
-    fetch('/WebDevProject_WIP/php/library/save-folder.php', {
+    fetch('/php/library/save-folder.php', {
         method: 'POST',
         body: data
     })
@@ -285,14 +285,14 @@ function fetchFilesAndFolders() {
     }
 
     // First fetch folders to create the structure
-    fetch(`/WebDevProject_WIP/php/library/fetch-folders.php?userId=${userAuth.userId}`)
+    fetch(`/php/library/fetch-folders.php?userId=${userAuth.userId}`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         })
         .then(folderData => {
             // Now fetch files to populate the folders
-            fetch(`/WebDevProject_WIP/php/library/fetch-files.php?userId=${userAuth.userId}`)
+            fetch(`/php/library/fetch-files.php?userId=${userAuth.userId}`)
                 .then(response => {
                     if (!response.ok) throw new Error('Network response was not ok');
                     return response.json();
@@ -427,7 +427,7 @@ function openFile(id) {
         return;
     }
 
-    fetch(`/WebDevProject_WIP/php/library/fetch-file.php?id=${id}&userId=${userAuth.userId}`)
+    fetch(`/php/library/fetch-file.php?id=${id}&userId=${userAuth.userId}`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
@@ -470,7 +470,7 @@ function deleteFile(id) {
 
     if (!confirm("Are you sure you want to delete this file?")) return;
 
-    fetch("/WebDevProject_WIP/php/library/delete-file.php", {
+    fetch("/php/library/delete-file.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id, userId: userAuth.userId })
@@ -502,7 +502,7 @@ function deleteFolder(id) {
 
     if (!confirm("Are you sure you want to delete this folder and all its contents?")) return;
 
-    fetch("/WebDevProject_WIP/php/library/delete-folder.php", {
+    fetch("/php/library/delete-folder.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id, userId: userAuth.userId })
@@ -638,7 +638,7 @@ function moveFile(fileId, folderId) {
     };
     
     // Sends the request to move the file
-    fetch('/WebDevProject_WIP/php/library/move-file.php', {
+    fetch('/php/library/move-file.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
