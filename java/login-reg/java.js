@@ -116,11 +116,8 @@ loginForm.addEventListener('submit', function(e) {
     // Get form data
     const formData = new FormData(loginForm);
     
-    // Get the base URL (to handle both development and production environments)
-    const baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-    
     // Submit form using fetch API with absolute path
-    fetch(`${baseUrl}/php/login-reg/log.php`, {
+    fetch(`$/php/login-reg/log.php`, {
         method: 'POST',
         body: formData,
         credentials: 'include' // Important for handling cookies/sessions
@@ -198,11 +195,8 @@ registerForm.addEventListener('submit', function(e) {
     // Get form data
     const formData = new FormData(registerForm);
     
-    // Get the base URL (to handle both development and production environments)
-    const baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-    
     // Submit form using fetch API with absolute path
-    fetch(`${baseUrl}/php/login-reg/reg.php`, {
+    fetch(`$/php/login-reg/reg.php`, {
         method: 'POST',
         body: formData,
         credentials: 'include' // Important for handling cookies/sessions
@@ -294,16 +288,13 @@ document.getElementById('verifyEmailBtn').addEventListener('click', function() {
         return;
     }
     
-    // Get base URL
-    const baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-    
     // Create form data
     const formData = new FormData();
     formData.append('email', email);
     formData.append('action', 'verifyEmail');
     
     // Fetch security question for the email
-    fetch(`${baseUrl}/php/login-reg/forgot_password.php`, {
+    fetch(`$/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
@@ -340,9 +331,6 @@ document.getElementById('verifyAnswerBtn').addEventListener('click', function() 
         return;
     }
     
-    // Get base URL
-    const baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-    
     // Create form data
     const formData = new FormData();
     formData.append('email', email);
@@ -350,7 +338,7 @@ document.getElementById('verifyAnswerBtn').addEventListener('click', function() 
     formData.append('action', 'verifyAnswer');
     
     // Verify security answer
-    fetch(`${baseUrl}/php/login-reg/forgot_password.php`, {
+    fetch(`$/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
@@ -380,9 +368,6 @@ document.getElementById('resetPasswordBtn').addEventListener('click', function()
         return;
     }
     
-    // Get base URL
-    const baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-    
     // Create form data
     const formData = new FormData();
     formData.append('email', email);
@@ -390,7 +375,7 @@ document.getElementById('resetPasswordBtn').addEventListener('click', function()
     formData.append('action', 'resetPassword');
     
     // Reset password
-    fetch(`${baseUrl}/php/login-reg/forgot_password.php`, {
+    fetch(`$/php/login-reg/forgot_password.php`, {
         method: 'POST',
         body: formData
     })
